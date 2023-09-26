@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  background-color: #1c232a;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  max-width: 750px;
+  color: #eee;
+  margin: 0px auto;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#root {
+  margin: 16px;
+}
+.geoPoint {
+  background: #24303b;
+  margin-top: 16px;
+  border: 1px solid #ffffff0f;
+  border-radius: 3px;
+  box-shadow: 0 2px 3px #00000061;
+  padding: 2px 8px 6px;
+}
+.geo-point-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.geo-point-coordinates {
+  opacity: .4;
+  display: block;
+}
+.geo-point-distance, .geo-point-bearing {
+  display: inline-block;
+  margin-right: 16px;
+  font-size: 1.3em;
+}
+.bearing-indicator {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #ffffffa8;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 4px;
+  border-radius: 100px;
+  position: relative;
+}
+.bearing-indicator::after {
+  content: "N";
+  font-size: 8px;
+  position: absolute;
+  top: -4px;
+  left: calc(50% - 4.5px);
+  background: white;
+  line-height: 0.8;
+  border-radius: 10pc;
+  color: #24303b;
+  font-weight: bold;
+  padding: 1px;
+  width: 7px;
+  height: 7px;
+}
+.bearing-arrow {
+  /* rotate: 0deg!important; */
+  position: absolute;
+  width: 2px;
+  height: 50%;
+  background: red;
+  top: 0px;
+  left: calc(50% - 1px);
+  z-index: 1;
+  transform-origin: bottom;
+}
+#my-location {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  padding-left: 8px;
 }
-
-.App-link {
-  color: #61dafb;
+.my-coordinates {
+  flex-grow: 1;
+  font-size: 1.5em;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  background: #356796;
+  border: 1px solid #ffffff5c;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #fff;
+  padding: 8px;
+}
+button:hover {
+  border-color: #ffffff9e;
+}
+#new-point {
+  padding: 8px;
+}
+input[type="text"], input[type="number"] {
+  background: #ffffff20;
+  color: currentColor;
+  border: 1px solid rgba(255, 255, 255, 0.305);
+}
+input[name=new-point-title] {
+  width: 100%;
+}
+.new-point-coordinates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 8px 0;
+}
+.new-point-coordinates input {
+  flex-grow: 1;
+  font-size: 1.3em;
+  min-width: 2ch;
+}
+#new-point button {
+  width: 100%;
 }
