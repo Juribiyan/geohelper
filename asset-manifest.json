@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/geohelper/static/css/main.9a38316c.css",
+    "main.js": "/geohelper/static/js/main.e57a671e.js",
+    "static/js/787.8b6e50f1.chunk.js": "/geohelper/static/js/787.8b6e50f1.chunk.js",
+    "index.html": "/geohelper/index.html",
+    "main.9a38316c.css.map": "/geohelper/static/css/main.9a38316c.css.map",
+    "main.e57a671e.js.map": "/geohelper/static/js/main.e57a671e.js.map",
+    "787.8b6e50f1.chunk.js.map": "/geohelper/static/js/787.8b6e50f1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9a38316c.css",
+    "static/js/main.e57a671e.js"
+  ]
+}
