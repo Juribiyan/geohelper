@@ -61,8 +61,8 @@ function App() {
       <form onSubmit={addPoint}>
         <input type="text" name="new-point-title" className="geo-point-title" ref={newPointName} placeholder="Название"/>
         <div className="new-point-coordinates">
-          <input autocomplete="off" type="number" name="new-point-lat" ref={newPointLat} placeholder="Широта" />
-          <input autocomplete="off" type="number" name="new-point-lon" ref={newPointLon} placeholder="Долгота" />
+          <input autocomplete="off" type="number" step="any" name="new-point-lat" ref={newPointLat} placeholder="Широта" />
+          <input autocomplete="off" type="number" step="any" name="new-point-lon" ref={newPointLon} placeholder="Долгота" />
         </div>
         <button type="submit">Добавить точку</button>
       </form>
