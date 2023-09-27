@@ -1,6 +1,10 @@
 import React from 'react'
 
-export default function GeoPoint({point}) {
+export default function GeoPoint({point, deletePoint}) {
+  function handleDeletePoint() {
+    deletePoint(point.id)
+  }
+
   return (
     <div className="geoPoint">
       <div className="geo-point-title">{point.name}</div>
@@ -12,6 +16,7 @@ export default function GeoPoint({point}) {
         </div>
         {prettyPrintBearing(point.bearing)}
       </div>
+      <div className="geo-point-delete" title="Удалить точку" onClick={handleDeletePoint}></div>
     </div>
   )
 }
@@ -30,3 +35,4 @@ function toPrecise(num, decPoints) {
 function prettyPrintBearing(deg) {
   return `${toPrecise(deg, 1)}°`
 }
+

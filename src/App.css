@@ -19,6 +19,7 @@ body {
   border-radius: 3px;
   box-shadow: 0 2px 3px #00000061;
   padding: 2px 8px 6px;
+  position: relative;
 }
 .geo-point-title {
   font-size: 1.5em;
@@ -113,4 +114,35 @@ input[name=new-point-title] {
 }
 #new-point button {
   width: 100%;
+}
+.geo-point-delete {
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  top: 4px;
+  right: 4px;
+  opacity: .5;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+.geo-point-delete::before,
+.geo-point-delete::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: calc(100% - 4px);
+  background: currentColor;
+  translate: 11.5px 2px;
+}
+.geo-point-delete::before {
+  rotate: 45deg;
+}
+.geo-point-delete::after {
+  rotate: -45deg;
+}
+.geo-point-delete:hover {
+  opacity: 1;
+  background: #00000083;
+  border-color: #ffffff5a;
 }
